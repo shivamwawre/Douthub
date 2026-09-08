@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  douthub-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: douthub-academic-forum
+    image: douthub-forum:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - PYTHONUNBUFFERED=1
+      - GEMINI_PRIMARY_KEY=${GEMINI_PRIMARY_KEY:-AQ.Ab8RN6L-5YD8-4hcmR17XHR4-XmpdbavTGcHl38cMI_6bYVHeA}
+      - GEMINI_SECONDARY_KEY=${GEMINI_SECONDARY_KEY:-AQ.Ab8RN6LheFsWCah7Bnbb8N0PbYHc5QYO8tBGTF_b3CDB5M_UtA}
+    volumes:
+      # Persist SQLite database file on host
+      - ./academic_forum.db:/app/academic_forum.db
+    restart: unless-stopped

@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: douthub-academic-forum
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    healthCheckPath: /api/db/status
+    envVars:
+      - key: PORT
+        value: 3000

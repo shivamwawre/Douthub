@@ -9,7 +9,7 @@ Students often have small academic doubts but hesitate to ask in class. They res
 
 ---
 
-## 🚀 The 7 Core Features & Engine Scope
+## 🚀 The 7 Core Features & Engine Scope.
 
 | # | Feature | Description & Technical Mechanism |
 |---|---|---|
@@ -24,7 +24,7 @@ Students often have small academic doubts but hesitate to ask in class. They res
 
 ---
 
-## 📂 Repository Folder Structure
+## 📂 Repository Folder Structure.
 
 ```text
 Vibecoder/
